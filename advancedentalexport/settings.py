@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -128,7 +129,8 @@ STATIC_URL = '/static/'
 # ]
 STATIC_ROOT = "/home/awk1gcf7eaia/public_html/advancedentalexport.com/static"
 MEDIA_URL = '/media/'
-MEDIA_ROOT = "/home/awk1gcf7eaia/public_html/advancedentalexport.com/media"
+#MEDIA_ROOT = "/home/awk1gcf7eaia/public_html/advancedentalexport.com/media"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #ckedior
 CKEDITOR_BASEPATH = "/static/ckeditor/ckeditor/"
 CKEDITOR_UPLOAD_PATH = "uploads/"
